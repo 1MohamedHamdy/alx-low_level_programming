@@ -10,7 +10,7 @@
  */
 int main(void)
 {
-	char message[] = "_putchar\n"
+	char message[] = "_putchar\n";
 	/* Write the message to stdout using _putchar function */
 	int i = 0;
 
