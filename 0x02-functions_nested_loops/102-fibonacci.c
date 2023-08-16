@@ -10,24 +10,24 @@
  */
 int main(void)
 {
-	int fib[50], i;
+	int i;
+	unsigned long fib1 = 0, fib2 = 1, sum;
 
-	fib[0] = 1;
-	fib[1] = 2;
-
-	for (i = 2; i < 50; i++)
-	{
-		fib[i] = fib[i - 1] + fib[i - 2];
-	}
 	for (i = 0; i < 50; i++)
 	{
-		printf("%d", fib[i]);
-		if (i < 49)
+		sum = fib1 + fib2;
+		printf("%lu", sum);
+		fib1 = fib2;
+		fib2 = sum;
+		if (i == 49)
 		{
-			printf(", ");
+			printf("\n");
+		}
+		else
+		{
+			printf(". ");
 		}
 	}
-	printf("\n");
 	return (0);
 }
 
