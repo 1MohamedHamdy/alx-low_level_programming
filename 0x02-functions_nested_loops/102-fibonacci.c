@@ -10,11 +10,10 @@
  */
 int main(void)
 {
-	int fib[50];
+	int fib[50], i;
 
 	fib[0] = 1;
 	fib[1] = 2;
-	int i;
 
 	for (i = 2; i < 50; i++)
 	{
