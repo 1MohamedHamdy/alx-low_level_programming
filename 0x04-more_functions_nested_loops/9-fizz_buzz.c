@@ -1,6 +1,4 @@
 #include <stdio.h>
-#define MIN_NUM 1
-#define MAX_NUM 100
 
 /**
  * main - Entry point of the program.
@@ -10,7 +8,7 @@
 int main(void)
 {
 int i;
-for (i = MIN_NUM; i <= MAX_NUM; i++)
+for (i = 1; i <= 100; i++)
 {
 if (i % 3 == 0)
 {
