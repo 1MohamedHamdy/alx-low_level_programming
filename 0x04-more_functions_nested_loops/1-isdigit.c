@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isupper - Checks if a character is digit Betty-style.
+ * _isdigit - Checks if a character is digit Betty-style.
  * @c: The character to be checked.
  *
  * Return: 1 if the character is digit, 0 otherwise.
