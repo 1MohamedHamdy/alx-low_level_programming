@@ -51,6 +51,6 @@ int main(void)
 {
 unsigned long int n = 612852475143;
 unsigned long int largest_prime = largest_prime_factor(n);
-printf("The largest prime factor of %lu is %lu.\n", n, largest_prime);
+printf("%lu\n", largest_prime);
 return (0);
 }
