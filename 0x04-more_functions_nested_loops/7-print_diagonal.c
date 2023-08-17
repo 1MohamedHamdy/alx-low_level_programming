@@ -14,9 +14,9 @@ for (; i < n; i++)
 {
 for (; j < i ; j++)
 {
-_putchar(32);
+_putchar(' ');
 }
-_putchar(92);
+_putchar('\\');
 _putchar('\n');
 }
 newline:
