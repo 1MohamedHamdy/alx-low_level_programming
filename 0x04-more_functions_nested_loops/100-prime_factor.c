@@ -2,46 +2,47 @@
 #include <stdbool.h>
 
 /**
- * is_prime - Checks if a number is prime.
- * @n: The number to check for primality.
- * Return: Returns true if the number is prime, false otherwise.
+ * _sqrt - Calculate the square root of a number using
+ * the Newton-Raphson method.
+ * @x: The number for which to calculate the square root.
+ * Return: The calculated square root.
  */
-bool is_prime(unsigned long int n)
+double _sqrt(double x)
 {
-unsigned long int i;
-if (n <= 1)
+float sqrt, tmp;
+sqrt = x / 2;
+tmp = 0;
+while (sqrt != tmp)
 {
-return (false);
+tmp = sqrt;
+sqrt = (x / tmp + tmp) / 2;
 }
-for (i = 2; i * i <= n; i++)
-{
-if (n % i == 0)
-{
-return (false);
-}
-}
-return (true);
+return (sqrt);
 }
 
 /**
- * largest_prime_factor - Finds the largest prime factor of a number.
- * @n: The number to find the largest prime factor of.
- * Return: The largest prime factor.
+ * largest_prime_factor - Find and print the largest prime factor of a number.
+ * @n: The number for which to find the largest prime factor.
  */
-unsigned long int largest_prime_factor(unsigned long int n)
+void largest_prime_factor(long int n)
 {
-unsigned long int largest_prime = 0;
-unsigned long int j;
-for (j = 2; j * j <= n; j++)
+int largest_prime, prmNu;
+while (n % 2 == 0)
+n = n / 2;
+for (prmNu = 3; prmNu <= _sqrt(n); prmNu += 2)
 {
-if (n % j == 0 && is_prime(j))
+while (n % prmNu == 0)
 {
-largest_prime = j;
+n = n / prmNu;
+largest_prime = prmNu;
 }
+}
+if (n > 2)
+largest_prime = n;
+printf("%d\n", largest_prime);
 }
 
-return (largest_prime);
-}
+
 /**
  * main - Entry point of the program.
  *
@@ -49,8 +50,6 @@ return (largest_prime);
  */
 int main(void)
 {
-unsigned long int n = 612852475143;
-unsigned long int largest_prime = largest_prime_factor(n);
-printf("%lu\n", largest_prime);
+largest_prime_factor(612852475143);
 return (0);
 }
