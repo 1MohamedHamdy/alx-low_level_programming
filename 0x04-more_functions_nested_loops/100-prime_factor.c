@@ -20,6 +20,6 @@ else
 divisor++;
 }
 }
-printf("%lu\n", divisor);
+printf("%lu g\n", divisor);
 return (0);
 }
