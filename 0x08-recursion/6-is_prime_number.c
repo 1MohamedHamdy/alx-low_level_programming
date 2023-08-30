@@ -22,7 +22,6 @@ int is_prime_recursive(int n, int divisor)
 	return (is_prime_recursive(n, divisor - 1));
 }
 
-
 /**
  * is_prime_number - Checks if a number is prime.
  * @n: The number to be checked.
