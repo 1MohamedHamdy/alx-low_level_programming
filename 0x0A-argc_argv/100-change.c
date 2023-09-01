@@ -42,12 +42,6 @@ int main(int argc, char *argv[])
 				{
 					i++;
 				}
-				else if (diff >= coins[0])
-				{
-					counter = diff / coins[0];
-					diff %= coins[0];
-					i++;
-				}
 				else
 				{
 					diff -= coins[i];
