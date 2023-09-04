@@ -57,6 +57,7 @@ char *get_next_word(char **str)
 		{
 			word_start = *str;
 			(*str)++;
+			word_end = word_start;
 		}
 		else if (!is_space(**str) && word_start != NULL)
 		{
