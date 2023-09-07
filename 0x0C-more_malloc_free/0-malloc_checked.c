@@ -10,7 +10,7 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	int *ptr = NULL;
+	void *ptr = NULL;
 
 	if (b == 0 || b >= MAX)
 		exit(98);
