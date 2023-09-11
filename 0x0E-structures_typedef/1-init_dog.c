@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "dog.h"
 
 /**
@@ -12,8 +13,12 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	/* Initialize the struct dog members */
-	d->name  = name;
-	d->age   = age;
-	d->owner = owner;
+	/* Check if the pointer to struct dog is not NULL */
+	if (d != NULL)
+	{
+		/* Initialize the struct dog members */
+		d->name  = name;
+		d->age   = age;
+		d->owner = owner;
+	}
 }
