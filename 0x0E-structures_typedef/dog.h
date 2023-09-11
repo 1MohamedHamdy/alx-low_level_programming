@@ -19,7 +19,11 @@ struct dog
 
 /*  prototype of function that initialize a variable of type struct dog */
 void init_dog(struct dog *d, char *name, float age, char *owner);
+
 /*  prototpe of function that prints a struct dog */
 void print_dog(struct dog *d);
+
+/* Define a new type dog_t as a new name for the type struct dog */
+typedef struct dog dog_t;
 
 #endif /* DOG_H */
