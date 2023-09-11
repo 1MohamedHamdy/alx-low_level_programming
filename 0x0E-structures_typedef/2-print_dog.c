@@ -23,9 +23,4 @@ void print_dog(struct dog *d)
 		/* Print the dog's owner or "(nil)" if it's NULL */
 		printf("Owner: %s\n", (d->owner != NULL) ? d->owner : "(nil)");
 	}
-	else
-	{
-		/* If the dog pointer is NULL, print "nothing" */
-		printf("%s\n", "nothing");
-	}
 }
