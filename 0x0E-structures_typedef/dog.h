@@ -29,4 +29,7 @@ typedef struct dog dog_t;
 /* prototype of function that creates a new dog */
 dog_t *new_dog(char *name, float age, char *owner);
 
+/* prototype of function that frees dogs */
+void free_dog(dog_t *d);
+
 #endif /* DOG_H */
