@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2;
-	op_func_ptr operator;
+	int (*operator)(int, int);
 
 	if (argc != 4)
 	{

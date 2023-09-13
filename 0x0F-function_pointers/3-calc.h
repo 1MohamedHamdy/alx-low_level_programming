@@ -16,9 +16,6 @@ typedef struct op
     int (*f)(int a, int b);
 } op_t;
 
-/* Function pointer type for operations */
-typedef int (*op_func_ptr)(int a, int b);
-
 /* Function prototypes */
 int op_add(int a, int b);
 int op_sub(int a, int b);
