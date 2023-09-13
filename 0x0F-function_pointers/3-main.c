@@ -23,18 +23,17 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	operator = argv[2];
 
-	if (strlen(operator) != 1)
+	operation = get_op_func(operator);
+
+	if (operator == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
 		return (99);
 	}
-
-	operation = get_op_func(operator);
-
-	if (operator == NULL)
+	if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '0'))
 	{
 		printf("Error\n");
-		return (99);
+		return(100);
 	}
 	result = operation(num1, num2);
 	printf("%d\n", result);
