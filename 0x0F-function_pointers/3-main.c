@@ -16,16 +16,17 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		return(98);
+		exit(98);
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
+	get_op = argv[2];
 
 	operator = get_op_func(argv[2]);
-	if (operator == NULL)
+	if (operator == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
-		return(99);
+		exit(99);
 	}
 	printf("%d\n", operator(num1, num2));
 	return (0);
