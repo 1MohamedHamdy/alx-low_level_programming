@@ -11,7 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
-	int (*operation)(int, int);
+	op_func_ptr operation;
 
 	if (argc != 4)
 	{
@@ -20,19 +20,13 @@ int main(int argc, char *argv[])
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
-	operator = argv[2];
 
 	operation = get_op_func(argv[2]);
 
-	if (operation == NULL || argv[2][1] != '\0')
+	if (operation == NULL)
 	{
 		printf("Error\n");
 		return (99);
-	}
-	if ((strcmp(operation, "/") == 0 || strcmp(operation, "%") == 0) && (num2 == 0))
-	{
-		printf("Error\n");
-		return (100);
 	}
 	result = operation(num1, num2);
 	printf("%d\n", result);

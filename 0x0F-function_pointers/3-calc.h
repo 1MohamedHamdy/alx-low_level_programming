@@ -5,6 +5,9 @@
 #include <stdlib.h>
 #include <string.h>
 
+/* Function pointer type for operations */
+typedef int (*op_func_ptr)(int a, int b);
+
 /**
  * struct op - Struct op
  *
