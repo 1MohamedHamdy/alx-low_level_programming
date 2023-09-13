@@ -23,9 +23,15 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 	operator = argv[2];
 
+	if (strlen(operator) != 1)
+	{
+		printf("Error\n");
+		return (99);
+	}
+
 	operation = get_op_func(operator);
 
-	if (operator == NULL || argv[2][1] != '\0')
+	if (operator == NULL)
 	{
 		printf("Error\n");
 		return (99);
