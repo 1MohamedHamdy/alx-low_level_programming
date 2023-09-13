@@ -10,23 +10,27 @@
  */
 int main(int argc, char *argv[])
 {
-	int num1, num2;
-	int (*operator)(int, int);
+	int num1, num2, result;
+	char *operator;
+	int (*operation)(int, int);
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(98);
+		return (98);
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
+	operator = argv[2];
 
-	operator = get_op_func(argv[2]);
+	operation = get_op_func(operator);
+
 	if (operator == NULL || argv[2][1] != '\0')
 	{
 		printf("Error\n");
-		exit(99);
+		return (99);
 	}
-	printf("%d\n", operator(num1, num2));
+	result = operation(num1, num2);
+	printf("%d\n", result);
 	return (0);
 }
