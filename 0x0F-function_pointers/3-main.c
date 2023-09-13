@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
 	num2 = atoi(argv[3]);
 
 	operator = get_op_func(argv[2]);
-	if (operation == NULL)
+	if (operator == NULL)
 	{
 		printf("Error\n");
 		exit(99);
