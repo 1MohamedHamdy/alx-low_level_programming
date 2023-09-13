@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit(98);
+		return(98);
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
@@ -25,7 +25,7 @@ int main(int argc, char *argv[])
 	if (operator == NULL)
 	{
 		printf("Error\n");
-		exit(99);
+		return(99);
 	}
 	printf("%d\n", operator(num1, num2));
 	return (0);
