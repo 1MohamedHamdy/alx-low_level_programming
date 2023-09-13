@@ -13,28 +13,28 @@
 int main(int argc, char *argv[])
 {
 	int num1, num2, result;
-	op_func_ptr operation;
+	op_func_ptr operator;
 
 	if (argc != 4)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 	num1 = atoi(argv[1]);
 	num2 = atoi(argv[3]);
 
-	operation = get_op_func(argv[2]);
+	operator = get_op_func(argv[2]);
 	if (operation == NULL)
 	{
 		printf("Error\n");
-		exit (99);
+		exit(99);
 	}
 	if (!num2 && (argv[2][0] == '/' || argv[2][0] == '%'))
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	result = operation(num1, num2);
+	result = operator(num1, num2);
 	printf("%d\n", result);
 	return (0);
 }
