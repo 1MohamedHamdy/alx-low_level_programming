@@ -30,10 +30,10 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (99);
 	}
-	if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '0'))
+	if ((*operator == '/' || *operator == '%') && (*argv[3] == '0'))
 	{
 		printf("Error\n");
-		return(100);
+		return (100);
 	}
 	result = operation(num1, num2);
 	printf("%d\n", result);
